@@ -1,0 +1,30 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container" style=" object-fit: cover;
+    height: auto;
+    width: 100%;">
+   
+      <a class="navbar-brand" style="color: white;font-family:Georgia, 'Times New Roman', Times, serif;font-size: 30px; " > NIVA</div>
+       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex" role="search" style="margin-right: 40px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        
+        <div class="navbar-nav ms-auto" style="margin-right: 100px;font-size: 20px;" >
+          <a class="nav-link active" aria-current="page" href="#" style="color: yellow;">Home</a>
+          
+          <a class="nav-link" href="{% url 'categories' %}"style="color: yellow;">categories</a>
+          <a class="nav-link" href="{% url 'register' %}"style="color: yellow;">sign </a>
+          <a class="nav-link" href="#" style="padding-left: 29px;">
+            <img src="{% static 'image/cart.png' %}" alt="Cart" style="width: 35px; height: 35px;">
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
