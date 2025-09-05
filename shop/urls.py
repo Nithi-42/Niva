@@ -2,7 +2,7 @@
 URL configuration for shop project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/5.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -22,21 +22,17 @@ from mykart import views
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-     path('', views.home, name='home'),
+     path('', views.home, name='index'),
      path('register/', views.register, name='register'),
       path('cart/', views.cart, name='cart'),
+       path('checkout/', views.checkout, name='checkout'),
         path('categories/', views.categories, name='categories'),
-    
-    
-    
+       path('skirts/', views.skirts,name='skirts'),
+        path('view/',views.view,name='view'),
+      
+     
+
 ]
 
-
-
-  
-
-
-
-
-
-
+    
+    
