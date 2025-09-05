@@ -1,0 +1,134 @@
+{% load static %}
+{% block content %}
+  <hr style="border-color:#b8bfc2;">
+<div class="container" style="margin-top:30px;" ></div>
+<h4 class="mb-3" style="background: black; color: yellow; margin-left: 40px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" ><b> FIT URS</b></h4>
+  <hr style="border-color:#b8bfc2; ">
+  <style>
+/* Full page background */
+body {
+  background-color: #000;   /* black background */
+  color: #fff;              /* default white text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  padding: 30px;
+}
+
+/* Product Card */
+.product-card {
+  width: 220px;
+  float: left;
+  margin: 130px;
+  background-color: #000;    /* black card */
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 255, 0, 0.6);
+  background-color: #111;
+}
+
+/* Image */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid yellow;
+}
+
+/* Title */
+.product-card .card-title {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Price */
+.old_price {
+  color: #bbb;
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+.new_price {
+  color: yellow;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Button */
+.btn-yellow {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.btn-yellow:hover {
+  background-color: black;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+</style>
+<div class="container my-5 clearfix">
+  <h4 class="text-center text-warning mb-4"><b>Latest Collection</b></h4>
+
+  <!-- Card 1 -->
+  <div class="product-card">
+    <img src="{% static 'image/party wear.jpg' %}" alt="Western Top">
+    <div class="card-body p-3">
+      <h6 class="card-title">Western Top</h6>
+      <p class="card-text mb-2">
+        <span class="old_price">₹1400</span>
+        <span class="float-end new_price">₹500</span>
+      </p>
+      <button type="button" class="btn-yellow btn-sm">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="product-card">
+    <img src="{% static 'image/party wear.jpg' %}" alt="Western Top">
+    <div class="card-body p-3">
+      <h6 class="card-title">Western Top</h6>
+      <p class="card-text mb-2">
+        <span class="old_price">₹1400</span>
+        <span class="float-end new_price">₹500</span>
+      </p>
+      <button type="button" class="btn-yellow btn-sm">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="product-card">
+    <img src="{% static 'image/party wear.jpg' %}" alt="Western Top">
+    <div class="card-body p-3">
+      <h6 class="card-title">Western Top</h6>
+      <p class="card-text mb-2">
+        <span class="old_price">₹1400</span>
+        <span class="float-end new_price">₹500</span>
+      </p>
+      <button type="button" class="btn-yellow btn-sm">Add to Cart</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

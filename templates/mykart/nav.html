@@ -16,12 +16,13 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         
         <div class="navbar-nav ms-auto" style="margin-right: 100px;font-size: 20px;" >
-          <a class="nav-link active" aria-current="page" href="#" style="color: yellow;">Home</a>
+          <a class="nav-link " href="{% url 'index' % }" style="color: yellow;">Home</a>
           
           <a class="nav-link" href="{% url 'categories' %}"style="color: yellow;">categories</a>
           <a class="nav-link" href="{% url 'register' %}"style="color: yellow;">sign </a>
-          <a class="nav-link" href="#" style="padding-left: 29px;">
+          <a class="nav-link" href="{% url 'cart' %}" style="padding-left: 29px;">
             <img src="{% static 'image/cart.png' %}" alt="Cart" style="width: 35px; height: 35px;">
+          
           </a>
           
         </div>

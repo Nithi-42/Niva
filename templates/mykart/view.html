@@ -1,0 +1,105 @@
+{% load static %}
+   {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .product-view {
+            min-height: 100vh; /* Full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .product-img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+        .product-info {
+            max-width: 800px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn-yellow {
+            background-color: #ffc107;
+            border: none;
+            color: black;
+        }
+        .btn-yellow:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-view">
+    <!-- Product Image -->
+    <img src="{% static 'image/western tops.jpg' %}" alt="Product" class="product-img img-fluid">
+
+    <!-- Product Info -->
+    <div class="product-info">
+        <h1>Western Top</h1>
+        <h3 class="text-warning">₹ 999</h3>
+        <p>
+            A stylish western top made from premium quality fabric, perfect for casual outings and parties. 
+            Soft on skin, durable, and easy to maintain.
+        </p>
+        
+        <!-- Size Selection -->
+        <h5>Select Size:</h5>
+        <form class="d-inline-block">
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="size" value="S">
+                <label class="form-check-label">S</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="size" value="M">
+                <label class="form-check-label">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="size" value="L">
+                <label class="form-check-label">L</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="size" value="XL">
+                <label class="form-check-label">XL</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="size" value="XXL">
+                <label class="form-check-label">XXL</label>
+            </div>
+        </form>
+
+         <h5 class="mt-4">Highlights:</h5>
+            <ul>
+                <li>Premium Quality Fabric</li>
+                <li>Trendy Western Design</li>
+                <li>Available in Multiple Sizes</li>
+                <li>Easy Machine Wash</li>
+            </ul>
+
+
+        <!-- Buttons -->
+        <div class="mt-4">
+            <button class="btn btn-yellow me-3">Add to Cart</button>
+            <a href="{% url 'index' %}" class="btn btn-outline-warning">Back to Shop</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
